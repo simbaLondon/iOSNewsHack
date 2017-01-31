@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  SearchResultsViewController.swift
 //  iOSHack
 //
-//  Created by Simone Barbara on 31/01/2017.
+//  Created by Hristo Uzunov  on 31/01/2017.
 //  Copyright © 2017 Simone Barbara. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
