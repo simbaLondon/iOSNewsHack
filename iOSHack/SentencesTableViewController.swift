@@ -28,7 +28,7 @@ class SentencesTableViewController: UITableViewController {
     for item in 0 ..< 5 {
       var resultModels = [ResultModel]()
       for result in 0 ..< 5 {
-        let resultModel = ResultModel(modelURL: "model url \(result)", modelTitle: "title for model \(result)", modelSignificance: Double(result) + 2.5)
+        let resultModel = ResultModel(modelURL: "model url \(result)", modelTitle: "title for model \(result)", modelSignificance: Double(result) + 2.5, type: SearchResultType.text)
         resultModels.append(resultModel)
       }
       let sentcence = SentenceModel(sentenceText: "text type string for object \(item)", resultModels: resultModels)

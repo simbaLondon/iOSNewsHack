@@ -17,7 +17,8 @@ class SearchResultsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
+    collectionView.register(UINib(nibName: "SearchResultCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "searchResult")
+    
   }
   
   override func didReceiveMemoryWarning() {
@@ -32,7 +33,7 @@ extension SearchResultsViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = UICollectionViewCell()
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchResult", for: indexPath) as! SearchResultCollectionViewCell
     
     return cell
   }
