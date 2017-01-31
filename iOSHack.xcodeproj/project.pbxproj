@@ -14,6 +14,7 @@
 		77CE8FB11E40B1A9003B36A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8FAF1E40B1A9003B36A2 /* LaunchScreen.storyboard */; };
 		77CE8FBC1E40B1AA003B36A2 /* iOSHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FBB1E40B1AA003B36A2 /* iOSHackTests.swift */; };
 		77CE8FC71E40B1AA003B36A2 /* iOSHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */; };
+		EA91A56A1E40B39B00E7017C /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA91A5691E40B39B00E7017C /* MyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		77CE8FC21E40B1AA003B36A2 /* iOSHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSHackUITests.swift; sourceTree = "<group>"; };
 		77CE8FC81E40B1AA003B36A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA91A5691E40B39B00E7017C /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				77CE8FAD1E40B1A9003B36A2 /* Assets.xcassets */,
 				77CE8FAF1E40B1A9003B36A2 /* LaunchScreen.storyboard */,
 				77CE8FB21E40B1A9003B36A2 /* Info.plist */,
+				EA91A5691E40B39B00E7017C /* MyViewController.swift */,
 			);
 			path = iOSHack;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77CE8FA91E40B1A9003B36A2 /* ViewController.swift in Sources */,
+				EA91A56A1E40B39B00E7017C /* MyViewController.swift in Sources */,
 				77CE8FA71E40B1A9003B36A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				77CE8FCD1E40B1AA003B36A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77CE8FCE1E40B1AA003B36A2 /* Build configuration list for PBXNativeTarget "iOSHackTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				77CE8FD01E40B1AA003B36A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77CE8FD11E40B1AA003B36A2 /* Build configuration list for PBXNativeTarget "iOSHackUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				77CE8FD31E40B1AA003B36A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
