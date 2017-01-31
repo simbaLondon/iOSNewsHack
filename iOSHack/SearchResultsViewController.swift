@@ -10,6 +10,10 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
   
+  @IBOutlet private weak var collectionView: UICollectionView!
+  
+  var searchResults = [ResultModel]()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -20,4 +24,20 @@ class SearchResultsViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+}
+
+extension SearchResultsViewController: UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return searchResults.count
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = UICollectionViewCell()
+    
+    return cell
+  }
+}
+
+extension SearchResultsViewController: UICollectionViewDelegate {
+  
 }

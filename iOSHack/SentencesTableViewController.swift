@@ -15,6 +15,13 @@ class SentencesTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let nib = UINib(nibName: "SenteceTableViewCell", bundle: Bundle.main)
+    let view = nib.instantiate(withOwner: self, options: nil).first as! UITableViewCell
+    let height = view.frame.size.height
+    
+    tableView.rowHeight = height
+    
+    tableView.register(nib, forCellReuseIdentifier: "sentenceCell")
     
     //TODO: fetch the senteces from the service
     
@@ -40,7 +47,10 @@ class SentencesTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell()
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "sentenceCell") as! SenteceTableViewCell
+    
+    cell.viewModel = sentences[indexPath.row]
     
     return cell
   }
