@@ -17,8 +17,25 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="254" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-bl-uQC">
+                        <rect key="frame" x="0.0" y="0.0" width="254" height="224"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eaX-bl-uQC" secondAttribute="trailing" id="4Tg-qX-j7W"/>
+                <constraint firstItem="eaX-bl-uQC" firstAttribute="top" secondItem="pns-zR-LXr" secondAttribute="top" id="AtJ-i8-E2l"/>
+                <constraint firstAttribute="bottom" secondItem="eaX-bl-uQC" secondAttribute="bottom" id="PaM-KW-daW"/>
+                <constraint firstItem="eaX-bl-uQC" firstAttribute="leading" secondItem="pns-zR-LXr" secondAttribute="leading" id="Wpx-e1-PUd"/>
+            </constraints>
             <size key="customSize" width="254" height="224"/>
+            <connections>
+                <outlet property="searchResultLabel" destination="eaX-bl-uQC" id="g93-gB-rIf"/>
+            </connections>
             <point key="canvasLocation" x="135" y="159"/>
         </collectionViewCell>
     </objects>

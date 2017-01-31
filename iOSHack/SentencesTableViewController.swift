@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol SentensesProtocol {
+  func sentenceSelected(results: [ResultModel])
+}
+
 class SentencesTableViewController: UITableViewController {
   
   var sentences = [SentenceModel]()
+  var sentensesDelegate: SentensesProtocol?
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    tableView.delegate = self
+    tableView.dataSource = self
     
     let nib = UINib(nibName: "SenteceTableViewCell", bundle: Bundle.main)
     let view = nib.instantiate(withOwner: self, options: nil).first as! UITableViewCell
@@ -53,5 +62,9 @@ class SentencesTableViewController: UITableViewController {
     cell.viewModel = sentences[indexPath.row]
     
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    sentensesDelegate?.sentenceSelected(results: sentences[indexPath.row].resultModels)
   }
 }
