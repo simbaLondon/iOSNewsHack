@@ -10,5 +10,5 @@ import Foundation
 
 struct SentenceModel {
   let sentenceText: String
-  let resultModels: [ResultModel]
+  var resultModels = [ResultModel]()
 }
