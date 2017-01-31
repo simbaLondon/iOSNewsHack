@@ -8,8 +8,15 @@
 
 import Foundation
 
+enum SearchResultType {
+  case link
+  case text
+  case socialMedia
+}
+
 struct ResultModel {
   let modelURL: String
   let modelTitle: String
   let modelSignificance: Double
+  let type: SearchResultType
 }
