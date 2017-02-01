@@ -12,6 +12,8 @@ class SearchResultsViewController: UIViewController {
   
   @IBOutlet private weak var collectionView: UICollectionView!
   
+  var currentLink = ""
+  
   var searchResults = [ResultModel]() {
     didSet {
       collectionView.reloadData()
@@ -27,6 +29,14 @@ class SearchResultsViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "WebView" {
+      if let controller = segue.destination as? WebViewController {
+        controller.link = currentLink
+      }
+    }
   }
 }
 
@@ -45,12 +55,17 @@ extension SearchResultsViewController: UICollectionViewDataSource {
 }
 
 extension SearchResultsViewController: UICollectionViewDelegate {
-  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let model = searchResults[indexPath.item]
+    currentLink = model.modelURL
+    performSegue(withIdentifier: "WebView", sender: self)
+    
+  }
 }
 
 extension SearchResultsViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: view.frame.size.width, height: 120)
+    return CGSize(width: collectionView.frame.size.width, height: 120)
   }
 }
 

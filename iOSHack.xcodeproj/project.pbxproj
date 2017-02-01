@@ -14,6 +14,7 @@
 		77CE8FB11E40B1A9003B36A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8FAF1E40B1A9003B36A2 /* LaunchScreen.storyboard */; };
 		77CE8FBC1E40B1AA003B36A2 /* iOSHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FBB1E40B1AA003B36A2 /* iOSHackTests.swift */; };
 		77CE8FC71E40B1AA003B36A2 /* iOSHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */; };
+		EA63323F1E40F47600FA90A1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63323E1E40F47600FA90A1 /* WebViewController.swift */; };
 		EAE18F961E40B706001A5BAE /* TranscriptReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE18F951E40B706001A5BAE /* TranscriptReaderViewController.swift */; };
 		EAE18F981E40B7A4001A5BAE /* SentencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE18F971E40B7A4001A5BAE /* SentencesTableViewController.swift */; };
 		EAE18F9A1E40B7D9001A5BAE /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE18F991E40B7D9001A5BAE /* SearchResultsViewController.swift */; };
@@ -57,6 +58,7 @@
 		77CE8FC21E40B1AA003B36A2 /* iOSHackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSHackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSHackUITests.swift; sourceTree = "<group>"; };
 		77CE8FC81E40B1AA003B36A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA63323E1E40F47600FA90A1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EAE18F951E40B706001A5BAE /* TranscriptReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptReaderViewController.swift; sourceTree = "<group>"; };
 		EAE18F971E40B7A4001A5BAE /* SentencesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentencesTableViewController.swift; sourceTree = "<group>"; };
 		EAE18F991E40B7D9001A5BAE /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				EAE18F971E40B7A4001A5BAE /* SentencesTableViewController.swift */,
 				EAE18F991E40B7D9001A5BAE /* SearchResultsViewController.swift */,
 				77CE8FAA1E40B1A9003B36A2 /* Main.storyboard */,
+				EA63323E1E40F47600FA90A1 /* WebViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				EAE18F9A1E40B7D9001A5BAE /* SearchResultsViewController.swift in Sources */,
 				778041641E40F0DB00E9701F /* Parser.swift in Sources */,
 				EAE18F9E1E40BC6C001A5BAE /* ResultModel.swift in Sources */,
+				EA63323F1E40F47600FA90A1 /* WebViewController.swift in Sources */,
 				EAE18FA11E40BCDA001A5BAE /* NetworkManager.swift in Sources */,
 				EAE18F9C1E40BC41001A5BAE /* SentenceModel.swift in Sources */,
 				77CE8FA71E40B1A9003B36A2 /* AppDelegate.swift in Sources */,
