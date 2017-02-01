@@ -67,4 +67,8 @@ class SentencesTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     sentensesDelegate?.sentenceSelected(results: sentences[indexPath.row].resultModels)
   }
+  
+  
+  
+   
 }
