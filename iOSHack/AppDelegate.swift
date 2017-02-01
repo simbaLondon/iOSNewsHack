@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       masterViewController.sentensesDelegate = detailViewController
       
-      self.getData()
+//      self.getData()
       
         return true
     }
