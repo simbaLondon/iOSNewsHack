@@ -14,6 +14,8 @@ class Parser{
     do {
       let json = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as? [String: AnyObject]
       
+      print(json)
+      
       return json
       
     }
@@ -50,14 +52,16 @@ class Parser{
     
     var tempArray = [[String:String]]()
     
+    //print(jsonData["entities"]?.count)
+    
     for entityN in jsonData["entities"] as! [AnyObject] {
       
       
       // create the entity dictionary
       let name = entityN["name"]!!
-      let wikipedia = (entityN["metadata"] as! [String:AnyObject])["wikipedia_url"] as! String
+      let wikipedia = ((entityN["metadata"] as! [String:AnyObject])["wikipedia_url"] as? String)
       
-      let tempDict = ["name":name,"wikipedia":wikipedia]
+      let tempDict = ["name":name,"wikipedia":wikipedia ?? ""]
       tempArray.append(tempDict as! [String : String])
       
     }
