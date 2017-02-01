@@ -15,7 +15,7 @@
 		77CE8FB11E40B1A9003B36A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8FAF1E40B1A9003B36A2 /* LaunchScreen.storyboard */; };
 		77CE8FBC1E40B1AA003B36A2 /* iOSHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FBB1E40B1AA003B36A2 /* iOSHackTests.swift */; };
 		77CE8FC71E40B1AA003B36A2 /* iOSHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */; };
-		AAE1C31E1E41ED9B0081C625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAE1C31D1E41ED9B0081C625 /* GoogleService-Info.plist */; };
+		AAE1C3201E41F3040081C625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAE1C31F1E41F3040081C625 /* GoogleService-Info.plist */; };
 		C2A40CECC8124BAE50B8D934 /* Pods_iOSHackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35569E9C636F935B0A762D4 /* Pods_iOSHackUITests.framework */; };
 		C3184BF217657D988FB7C4C1 /* Pods_iOSHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E1A1BDD9AD146E03077832 /* Pods_iOSHack.framework */; };
 		EA63323F1E40F47600FA90A1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63323E1E40F47600FA90A1 /* WebViewController.swift */; };
@@ -66,7 +66,7 @@
 		803D91B0312CEA79BEE20478 /* Pods_iOSHackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F9D44F4B8CCCE83F7C23DA /* Pods-iOSHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHack/Pods-iOSHack.release.xcconfig"; sourceTree = "<group>"; };
 		9DCE727DF5F340AD4C47EED0 /* Pods-iOSHackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHackUITests/Pods-iOSHackUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		AAE1C31D1E41ED9B0081C625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAE1C31F1E41F3040081C625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C330ECFC96C9AF5AE98D9445 /* Pods-iOSHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHack/Pods-iOSHack.debug.xcconfig"; sourceTree = "<group>"; };
 		C5148E1D93B509E3C1AADEA1 /* Pods-iOSHackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHackTests/Pods-iOSHackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9E1A1BDD9AD146E03077832 /* Pods_iOSHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +126,7 @@
 		77CE8F9A1E40B1A9003B36A2 = {
 			isa = PBXGroup;
 			children = (
-				AAE1C31D1E41ED9B0081C625 /* GoogleService-Info.plist */,
+				AAE1C31F1E41F3040081C625 /* GoogleService-Info.plist */,
 				77CE8FA51E40B1A9003B36A2 /* iOSHack */,
 				77CE8FBA1E40B1AA003B36A2 /* iOSHackTests */,
 				77CE8FC51E40B1AA003B36A2 /* iOSHackUITests */,
@@ -354,7 +354,7 @@
 				77CE8FAC1E40B1A9003B36A2 /* Main.storyboard in Resources */,
 				EAE18FAA1E40D85C001A5BAE /* SearchResultCollectionViewCell.xib in Resources */,
 				EAE18FA61E40D2FC001A5BAE /* SenteceTableViewCell.xib in Resources */,
-				AAE1C31E1E41ED9B0081C625 /* GoogleService-Info.plist in Resources */,
+				AAE1C3201E41F3040081C625 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
