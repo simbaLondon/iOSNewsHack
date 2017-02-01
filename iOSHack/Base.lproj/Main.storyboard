@@ -121,7 +121,7 @@
                             <outlet property="delegate" destination="jNd-ut-rWj" id="kk6-Wy-0r2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mO1-MZ-1Nu"/>
+                    <navigationItem key="navigationItem" title="Latest News" id="mO1-MZ-1Nu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FT-Oe-xEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
