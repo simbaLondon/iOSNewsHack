@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let splitViewController = self.window!.rootViewController as! UISplitViewController
       let leftNavController = splitViewController.viewControllers.first as! UINavigationController
       let masterViewController = leftNavController.topViewController as! SentencesTableViewController
-      let detailViewController = splitViewController.viewControllers.last as! SearchResultsViewController
+      let detailViewControllerNavigation = splitViewController.viewControllers.last as! UINavigationController
+      let detailViewController = detailViewControllerNavigation.viewControllers.first as! SearchResultsViewController
       
       
       masterViewController.sentensesDelegate = detailViewController
