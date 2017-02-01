@@ -13,11 +13,12 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var firebaseData: FirebaseData!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
       FIRApp.configure()
+      self.firebaseData = FirebaseData()
       
       let splitViewController = self.window!.rootViewController as! UISplitViewController
       let leftNavController = splitViewController.viewControllers.first as! UINavigationController
@@ -49,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+      self.firebaseData.databaseConnect()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

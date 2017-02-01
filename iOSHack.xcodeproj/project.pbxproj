@@ -16,6 +16,7 @@
 		77CE8FBC1E40B1AA003B36A2 /* iOSHackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FBB1E40B1AA003B36A2 /* iOSHackTests.swift */; };
 		77CE8FC71E40B1AA003B36A2 /* iOSHackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FC61E40B1AA003B36A2 /* iOSHackUITests.swift */; };
 		AAE1C3201E41F3040081C625 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAE1C31F1E41F3040081C625 /* GoogleService-Info.plist */; };
+		AAE1C3221E41F7CB0081C625 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1C3211E41F7CB0081C625 /* FirebaseData.swift */; };
 		C2A40CECC8124BAE50B8D934 /* Pods_iOSHackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35569E9C636F935B0A762D4 /* Pods_iOSHackUITests.framework */; };
 		C3184BF217657D988FB7C4C1 /* Pods_iOSHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9E1A1BDD9AD146E03077832 /* Pods_iOSHack.framework */; };
 		EA63323F1E40F47600FA90A1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA63323E1E40F47600FA90A1 /* WebViewController.swift */; };
@@ -67,6 +68,7 @@
 		96F9D44F4B8CCCE83F7C23DA /* Pods-iOSHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHack/Pods-iOSHack.release.xcconfig"; sourceTree = "<group>"; };
 		9DCE727DF5F340AD4C47EED0 /* Pods-iOSHackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHackUITests/Pods-iOSHackUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAE1C31F1E41F3040081C625 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAE1C3211E41F7CB0081C625 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		C330ECFC96C9AF5AE98D9445 /* Pods-iOSHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHack/Pods-iOSHack.debug.xcconfig"; sourceTree = "<group>"; };
 		C5148E1D93B509E3C1AADEA1 /* Pods-iOSHackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHackTests/Pods-iOSHackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9E1A1BDD9AD146E03077832 /* Pods_iOSHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 				EAE18F9D1E40BC6C001A5BAE /* ResultModel.swift */,
 				EAE18FA01E40BCDA001A5BAE /* NetworkManager.swift */,
 				778041631E40F0DB00E9701F /* Parser.swift */,
+				AAE1C3211E41F7CB0081C625 /* FirebaseData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE1C3221E41F7CB0081C625 /* FirebaseData.swift in Sources */,
 				EAE18F981E40B7A4001A5BAE /* SentencesTableViewController.swift in Sources */,
 				EAE18F9A1E40B7D9001A5BAE /* SearchResultsViewController.swift in Sources */,
 				778041641E40F0DB00E9701F /* Parser.swift in Sources */,
