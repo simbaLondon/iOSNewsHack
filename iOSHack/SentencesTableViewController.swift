@@ -19,7 +19,6 @@ class SentencesTableViewController: UITableViewController {
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
-      
     }
   }
   var sentensesDelegate: SentensesProtocol?
@@ -38,29 +37,6 @@ class SentencesTableViewController: UITableViewController {
     tableView.rowHeight = height
     
     tableView.register(nib, forCellReuseIdentifier: "sentenceCell")
-    
-    //TODO: fetch the senteces from the service
-    
-    let url = "https://language.googleapis.com/v1/documents:annotateText?fields=entities%2Csentences&key=AIzaSyAyQvf3giU4IT9LNZTzKaogZJ8A-4ClhHI"
-    let sentence = "There are a million refugees in your backyard right now"
-    let optionsDictionary = [
-      "document":
-        ["type": "PLAIN_TEXT",
-         "content": sentence],
-      "features":
-        ["extractEntities": true,
-         "extractDocumentSentiment": true,
-         "extractSyntax": true]] as [String : Any]
-    
-    NetworkManager.getRawData(url: url, sentence: sentence, optionsDictionary: optionsDictionary) { (finished, data) in
-      if let validData = data, let formattedDictionary = Parser.getJSONData(data: validData) {
-        let formatted = Parser.formatData(jsonData: formattedDictionary)
-        let finishedSentence = Parser.dictionaryToSentence(dictionary: formatted)
-        self.sentences.append(finishedSentence)
-      }
-      
-      
-    }
     
   }
   
@@ -86,7 +62,10 @@ class SentencesTableViewController: UITableViewController {
     sentensesDelegate?.sentenceSelected(results: sentences[indexPath.row].resultModels)
   }
   
-  
-  
-  
+}
+
+extension SentencesTableViewController: FirebaseDataProtocol {
+  func newSentenceIn(sentence: SentenceModel) {
+    self.sentences.append(sentence)
+  }
 }

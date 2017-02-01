@@ -9,9 +9,15 @@
 import Foundation
 import FirebaseDatabase
 
+protocol FirebaseDataProtocol {
+  func newSentenceIn(sentence: SentenceModel)
+}
+
 class FirebaseData {
   
   var ref: FIRDatabaseReference!
+  
+  var delegate: FirebaseDataProtocol?
 
   init() {
     ref = FIRDatabase.database().reference(withPath: "VoiceCaptures")
@@ -19,11 +25,28 @@ class FirebaseData {
   
   func databaseConnect () {
     
-    print("trying to connect to Database...")
-    self.ref.observeSingleEvent(of: FIRDataEventType.value, with: { (snapshot) in
+    self.ref.observe(FIRDataEventType.childAdded, with: { (snapshot) in
+      let all = snapshot.valueInExportFormat() as! [String: AnyObject]
+      let stringSentnce = all["text"] as! String
       
-      print(snapshot)
+      let url = "https://language.googleapis.com/v1/documents:annotateText?fields=entities%2Csentences&key=AIzaSyAyQvf3giU4IT9LNZTzKaogZJ8A-4ClhHI"
+      let sentence = stringSentnce
+      let optionsDictionary = [
+        "document":
+          ["type": "PLAIN_TEXT",
+           "content": stringSentnce],
+        "features":
+          ["extractEntities": true,
+           "extractDocumentSentiment": true,
+           "extractSyntax": true]] as [String : Any]
       
+      NetworkManager.getRawData(url: url, sentence: sentence, optionsDictionary: optionsDictionary, completion: { (finished, data) in
+        if let validData = data, let formattedDictionary = Parser.getJSONData(data: validData) {
+          let formatted = Parser.formatData(jsonData: formattedDictionary)
+          let finishedSentence = Parser.dictionaryToSentence(dictionary: formatted)
+          self.delegate?.newSentenceIn(sentence: finishedSentence)
+        }
+      })
     })
   }
   

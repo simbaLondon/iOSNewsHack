@@ -26,10 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let detailViewControllerNavigation = splitViewController.viewControllers.last as! UINavigationController
       let detailViewController = detailViewControllerNavigation.viewControllers.first as! SearchResultsViewController
       
+      self.firebaseData.delegate = masterViewController
       
       masterViewController.sentensesDelegate = detailViewController
-      
-//      self.getData()
       
         return true
     }
@@ -56,88 +55,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-  
-  
-/*   func getData(){
-   
-   let conn = NetworkManager()
-   let parser = Parser()
-   let url_to_gnl = "https://language.googleapis.com/v1/documents:annotateText?fields=entities%2Csentences&key=AIzaSyAyQvf3giU4IT9LNZTzKaogZJ8A-4ClhHI"
-   
-   DispatchQueue.global(qos: .userInitiated).async {
-   
-   let sentence = "Beatles, Trump, freedom, music, and the like The Telegraph, ios"
-    
-    let gnlOptionDictionary = GNLOptions()
-    
-    gnlOptionDictionary.content = sentence
-    gnlOptionDictionary.type = "PLAIN_TEXT"
-    
-   let dictionary = gnlOptionDictionary.formatOptionDictionary()
-    
-    
-   /* let dictionary = [
-      
-      "document":
-        
-        ["type": "PLAIN_TEXT",
-         
-         "content": sentence],
-      
-      "features":
-        
-        ["extractEntities": true,
-         
-         "extractDocumentSentiment": true,
-         
-         "extractSyntax": true]] as [String : Any]*/
-
-   // print(dictionary)
-
-    conn.getRawData(url: url_to_gnl, sentence:sentence, optionsDictionary: dictionary, completion: {
-   (success, data) -> Void in
-   
-   if data != nil{
-   
-   let jsonData = parser.getJSONData(data: data!)!
-   
-   print(jsonData)
-    
-   let formattedJson = parser.formatData(jsonData: jsonData)
-   
-   for entity in formattedJson["Entities"] as! [AnyObject]{
-   
-   print(entity)
-   
-   
-   }
-   
-   DispatchQueue.main.async {
-   
-   // put your UI interacting code here
-   }
-   
-   }else{
-   
-   print("Error")
-   DispatchQueue.main.async {
-   // display your error here
-   
-   }
-   
-   }
-   
-   })
-   
-   }
-   
-   }
-   
-  */
-  
- 
-
-
-
 }
 
