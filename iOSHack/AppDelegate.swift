@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       masterViewController.sentensesDelegate = detailViewController
       
-      //self.getData()
+      self.getData()
       
         return true
     }
@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
   
-  /*
+  
    func getData(){
    
    let conn = NetworkManager()
@@ -60,7 +60,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    DispatchQueue.global(qos: .userInitiated).async {
    
-   conn.getRawData(url: url_to_gnl, completion: {
+   let sentence = "I'm going to visit London, the capital of China"
+    let dictionary = [
+      
+      "document":
+        
+        ["type": "PLAIN_TEXT",
+         
+         "content": sentence],
+      
+      "features":
+        
+        ["extractEntities": true,
+         
+         "extractDocumentSentiment": true,
+         
+         "extractSyntax": true]] as [String : Any]
+
+    
+    conn.getRawData(url: url_to_gnl, sentence:sentence, optionsDictionary: dictionary, completion: {
    (success, data) -> Void in
    
    if data != nil{
@@ -98,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    }
    
-   */
+  
    
  
 

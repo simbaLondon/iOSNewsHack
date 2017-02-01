@@ -10,29 +10,10 @@ import Foundation
 
 class NetworkManager {
   
-  func getRawData(url:String, completion: @escaping (Bool, Data?) -> Void ) {
+  func getRawData(url:String, sentence: String?, optionsDictionary:[String:Any], completion: @escaping (Bool, Data?) -> Void ) {
     
     let urld = URL(string: url)!
-    
-   // to do: remove hardcoded text
-    let dictionary = [
-      
-      "document":
-        
-        ["type": "PLAIN_TEXT",
-         
-         "content": "I'm going to visit London, the capital of China"],
-      
-      "features":
-        
-        ["extractEntities": true,
-         
-         "extractDocumentSentiment": true,
-         
-         "extractSyntax": true]] as [String : Any]
-    
-    
-    let requestData = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+    let requestData = try? JSONSerialization.data(withJSONObject: optionsDictionary, options: .prettyPrinted)
     
     
     var request = URLRequest(url: urld)
