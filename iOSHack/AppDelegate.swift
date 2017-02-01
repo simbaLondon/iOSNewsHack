@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       masterViewController.sentensesDelegate = detailViewController
       
-      //self.getData()
+      self.getData()
       
         return true
     }
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   
   
- /*  func getData(){
+/*   func getData(){
    
    let conn = NetworkManager()
    let parser = Parser()
@@ -64,8 +64,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    DispatchQueue.global(qos: .userInitiated).async {
    
-   let sentence = "I'm going to visit London, the capital of China"
-    let dictionary = [
+   let sentence = "Beatles, Trump, freedom, music, and the like The Telegraph, ios"
+    
+    let gnlOptionDictionary = GNLOptions()
+    
+    gnlOptionDictionary.content = sentence
+    gnlOptionDictionary.type = "PLAIN_TEXT"
+    
+   let dictionary = gnlOptionDictionary.formatOptionDictionary()
+    
+    
+   /* let dictionary = [
       
       "document":
         
@@ -79,9 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          
          "extractDocumentSentiment": true,
          
-         "extractSyntax": true]] as [String : Any]
+         "extractSyntax": true]] as [String : Any]*/
 
-    
+   // print(dictionary)
+
     conn.getRawData(url: url_to_gnl, sentence:sentence, optionsDictionary: dictionary, completion: {
    (success, data) -> Void in
    
@@ -89,7 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    let jsonData = parser.getJSONData(data: data!)!
    
-   
+   print(jsonData)
+    
    let formattedJson = parser.formatData(jsonData: jsonData)
    
    for entity in formattedJson["Entities"] as! [AnyObject]{
@@ -120,8 +131,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    }
    
+  */
   
-   */
  
 
 

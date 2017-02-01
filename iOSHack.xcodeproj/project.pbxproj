@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02AC4DE0247B0D027E0FC6D7 /* Pods_iOSHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803D91B0312CEA79BEE20478 /* Pods_iOSHackTests.framework */; };
 		778041641E40F0DB00E9701F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778041631E40F0DB00E9701F /* Parser.swift */; };
+		77A383DC1E41F9D70066C463 /* GNLOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A383DB1E41F9D70066C463 /* GNLOptions.swift */; };
 		77CE8FA71E40B1A9003B36A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE8FA61E40B1A9003B36A2 /* AppDelegate.swift */; };
 		77CE8FAC1E40B1A9003B36A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8FAA1E40B1A9003B36A2 /* Main.storyboard */; };
 		77CE8FAE1E40B1A9003B36A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77CE8FAD1E40B1A9003B36A2 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		5D93E58296FDB543DD10BAF5 /* Pods-iOSHackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHackTests/Pods-iOSHackTests.release.xcconfig"; sourceTree = "<group>"; };
 		778041631E40F0DB00E9701F /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		77A383DB1E41F9D70066C463 /* GNLOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNLOptions.swift; sourceTree = "<group>"; };
 		77CE8FA31E40B1A9003B36A2 /* iOSHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77CE8FA61E40B1A9003B36A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77CE8FAB1E40B1A9003B36A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				EAE18F9D1E40BC6C001A5BAE /* ResultModel.swift */,
 				EAE18FA01E40BCDA001A5BAE /* NetworkManager.swift */,
 				778041631E40F0DB00E9701F /* Parser.swift */,
+				77A383DB1E41F9D70066C463 /* GNLOptions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				EAE18FA11E40BCDA001A5BAE /* NetworkManager.swift in Sources */,
 				EAE18F9C1E40BC41001A5BAE /* SentenceModel.swift in Sources */,
 				77CE8FA71E40B1A9003B36A2 /* AppDelegate.swift in Sources */,
+				77A383DC1E41F9D70066C463 /* GNLOptions.swift in Sources */,
 				EAE18F961E40B706001A5BAE /* TranscriptReaderViewController.swift in Sources */,
 				EAE18FA81E40D84D001A5BAE /* SearchResultCollectionViewCell.swift in Sources */,
 				EAE18FA31E40D0DE001A5BAE /* SenteceTableViewCell.swift in Sources */,

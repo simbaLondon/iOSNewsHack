@@ -14,7 +14,7 @@ class Parser{
     do {
       let json = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as? [String: AnyObject]
       
-      print(json)
+     // print(json)
       
       return json
       
