@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZEb-yc-uR3">
-                                <rect key="frame" x="20" y="20" width="728" height="1004"/>
+                                <rect key="frame" x="20" y="64" width="728" height="960"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UiY-lS-Jhh">
                                     <size key="itemSize" width="50" height="50"/>
@@ -55,13 +55,48 @@
                             <constraint firstItem="5cv-7l-w8p" firstAttribute="top" secondItem="ZEb-yc-uR3" secondAttribute="bottom" id="egP-Kz-iwy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3Fe-Ln-Mn8"/>
                     <connections>
                         <outlet property="collectionView" destination="ZEb-yc-uR3" id="QOj-Zk-5KM"/>
+                        <segue destination="rJw-fV-SdP" kind="show" identifier="WebView" id="xvt-Pp-6ML"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuC-Mg-2Sv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="196"/>
+            <point key="canvasLocation" x="603.125" y="195.703125"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="IbU-RQ-sNh">
+            <objects>
+                <viewController id="rJw-fV-SdP" customClass="WebViewController" customModule="iOSHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mML-la-9A8"/>
+                        <viewControllerLayoutGuide type="bottom" id="MeE-CU-yCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ies-C0-pHk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnO-bL-MRL">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bnO-bL-MRL" firstAttribute="leading" secondItem="ies-C0-pHk" secondAttribute="leading" id="8hW-qJ-sbD"/>
+                            <constraint firstAttribute="trailing" secondItem="bnO-bL-MRL" secondAttribute="trailing" id="BwO-g9-jA2"/>
+                            <constraint firstItem="bnO-bL-MRL" firstAttribute="top" secondItem="mML-la-9A8" secondAttribute="bottom" id="J3v-j0-LPj"/>
+                            <constraint firstItem="MeE-CU-yCy" firstAttribute="top" secondItem="bnO-bL-MRL" secondAttribute="bottom" id="wgf-Ng-SI3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="bnO-bL-MRL" id="JSh-9c-5YI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8V-23-2BN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="196"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="kqt-46-gKt">
@@ -114,12 +149,30 @@
                 <splitViewController id="YJR-BA-txO" customClass="TranscriptReaderViewController" customModule="iOSHack" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Nce-Jz-3rC" kind="relationship" relationship="masterViewController" id="sFX-Dm-K8E"/>
-                        <segue destination="lFV-p8-ui3" kind="relationship" relationship="detailViewController" id="dTX-Nf-LPv"/>
+                        <segue destination="oDh-Rd-7AQ" kind="relationship" relationship="detailViewController" id="dTX-Nf-LPv"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQe-R5-3ME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-934" y="-121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bjl-aC-e5B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oDh-Rd-7AQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qxi-Sq-KIL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lFV-p8-ui3" kind="relationship" relationship="rootViewController" id="vYu-K3-mHD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIf-Fd-a6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.5" y="195.703125"/>
         </scene>
     </scenes>
 </document>

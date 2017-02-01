@@ -18,8 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="254" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-bl-uQC">
-                        <rect key="frame" x="0.0" y="0.0" width="254" height="224"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Search result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-bl-uQC">
+                        <rect key="frame" x="0.0" y="0.0" width="254" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-Xl-Kt7">
+                        <rect key="frame" x="0.0" y="28.5" width="254" height="195.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,11 +35,15 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="eaX-bl-uQC" secondAttribute="trailing" id="4Tg-qX-j7W"/>
                 <constraint firstItem="eaX-bl-uQC" firstAttribute="top" secondItem="pns-zR-LXr" secondAttribute="top" id="AtJ-i8-E2l"/>
-                <constraint firstAttribute="bottom" secondItem="eaX-bl-uQC" secondAttribute="bottom" id="PaM-KW-daW"/>
+                <constraint firstItem="vvQ-Xl-Kt7" firstAttribute="top" secondItem="eaX-bl-uQC" secondAttribute="bottom" constant="8" symbolic="YES" id="F6W-mP-Ziu"/>
                 <constraint firstItem="eaX-bl-uQC" firstAttribute="leading" secondItem="pns-zR-LXr" secondAttribute="leading" id="Wpx-e1-PUd"/>
+                <constraint firstItem="vvQ-Xl-Kt7" firstAttribute="leading" secondItem="pns-zR-LXr" secondAttribute="leading" id="m4t-vm-ygT"/>
+                <constraint firstAttribute="bottom" secondItem="vvQ-Xl-Kt7" secondAttribute="bottom" id="sNY-Ra-6NG"/>
+                <constraint firstAttribute="trailing" secondItem="vvQ-Xl-Kt7" secondAttribute="trailing" id="wcH-cP-3et"/>
             </constraints>
             <size key="customSize" width="254" height="224"/>
             <connections>
+                <outlet property="linkLabel" destination="vvQ-Xl-Kt7" id="uv2-c1-mPI"/>
                 <outlet property="searchResultLabel" destination="eaX-bl-uQC" id="g93-gB-rIf"/>
             </connections>
             <point key="canvasLocation" x="135" y="159"/>
