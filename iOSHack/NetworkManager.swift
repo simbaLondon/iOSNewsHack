@@ -10,7 +10,7 @@ import Foundation
 
 class NetworkManager {
   
-  func getRawData(url:String, sentence: String?, optionsDictionary:[String:Any], completion: @escaping (Bool, Data?) -> Void ) {
+  static func getRawData(url:String, sentence: String?, optionsDictionary:[String:Any], completion: @escaping (Bool, Data?) -> Void ) {
     
     let urld = URL(string: url)!
     let requestData = try? JSONSerialization.data(withJSONObject: optionsDictionary, options: .prettyPrinted)
@@ -32,9 +32,6 @@ class NetworkManager {
     
     task.resume()
   }
-  
-  
-  
   
   
 }

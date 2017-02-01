@@ -14,7 +14,14 @@ protocol SentensesProtocol {
 
 class SentencesTableViewController: UITableViewController {
   
-  var sentences = [SentenceModel]()
+  var sentences = [SentenceModel]() {
+    didSet {
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+      
+    }
+  }
   var sentensesDelegate: SentensesProtocol?
   
   
@@ -34,16 +41,27 @@ class SentencesTableViewController: UITableViewController {
     
     //TODO: fetch the senteces from the service
     
-    for item in 0 ..< 5 {
-      var resultModels = [ResultModel]()
-      for result in 0 ..< 5 {
-        let resultModel = ResultModel(modelURL: "https://apple.com", modelTitle: "title for model \(result)", modelSignificance: Double(result) + 2.5, type: SearchResultType.text)
-        resultModels.append(resultModel)
+    let url = "https://language.googleapis.com/v1/documents:annotateText?fields=entities%2Csentences&key=AIzaSyAyQvf3giU4IT9LNZTzKaogZJ8A-4ClhHI"
+    let sentence = "There are a million refugees in your backyard right now"
+    let optionsDictionary = [
+      "document":
+        ["type": "PLAIN_TEXT",
+         "content": sentence],
+      "features":
+        ["extractEntities": true,
+         "extractDocumentSentiment": true,
+         "extractSyntax": true]] as [String : Any]
+    
+    NetworkManager.getRawData(url: url, sentence: sentence, optionsDictionary: optionsDictionary) { (finished, data) in
+      if let validData = data, let formattedDictionary = Parser.getJSONData(data: validData) {
+        let formatted = Parser.formatData(jsonData: formattedDictionary)
+        let finishedSentence = Parser.dictionaryToSentence(dictionary: formatted)
+        self.sentences.append(finishedSentence)
       }
-      let sentcence = SentenceModel(sentenceText: "text type string for object \(item)", resultModels: resultModels)
       
-      sentences.append(sentcence)
+      
     }
+    
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,5 +88,5 @@ class SentencesTableViewController: UITableViewController {
   
   
   
-   
+  
 }
