@@ -12,6 +12,8 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
   
   @IBOutlet private weak var searchResultLabel: UILabel!
   
+  @IBOutlet private weak var linkLabel: UILabel!
+  
   var viewModel: ResultModel? {
     didSet {
       if let validModel = viewModel {
@@ -22,5 +24,7 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
   
   private func setupUI(_ model: ResultModel) {
     searchResultLabel.text = model.modelTitle
+    let attributedLink = NSAttributedString(string: model.modelURL, attributes: [NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue])
+    linkLabel.attributedText = attributedLink
   }
 }
