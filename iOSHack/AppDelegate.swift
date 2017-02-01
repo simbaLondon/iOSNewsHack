@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       masterViewController.sentensesDelegate = detailViewController
       
-      self.getData()
+      //self.getData()
       
         return true
     }
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   
   
-   func getData(){
+ /*  func getData(){
    
    let conn = NetworkManager()
    let parser = Parser()
@@ -118,7 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    }
    
   
-   
+   */
  
 
 
