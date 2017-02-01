@@ -53,16 +53,14 @@ class WebViewController: UIViewController {
     webView.navigationDelegate = self
     baseView.addSubview(webView)
     
-    /*view.addSubview(webView)
-    
     let views = ["webview": webView]
     
-    let horisontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-[webview]-|", options: NSLayoutFormatOptions.alignAllLeading, metrics: nil, views: views)
+    let horisontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[webview]|", options: NSLayoutFormatOptions.alignAllLeading, metrics: nil, views: views)
     
-    let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-[webview]-|", options: NSLayoutFormatOptions.alignAllTop, metrics: nil, views: views)
+    let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[webview]|", options: NSLayoutFormatOptions.alignAllTop, metrics: nil, views: views)
     
     NSLayoutConstraint.activate(horisontalConstraints)
-    NSLayoutConstraint.activate(verticalConstraints)*/
+    NSLayoutConstraint.activate(verticalConstraints)
     
     loadLink()
   }
