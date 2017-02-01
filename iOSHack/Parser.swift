@@ -9,12 +9,12 @@
 import Foundation
 class Parser{
   
-  func getJSONData(data:Data) -> [String:AnyObject]? {
+  static func getJSONData(data:Data) -> [String:AnyObject]? {
     
     do {
       let json = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions()) as? [String: AnyObject]
       
-      print(json)
+     // print(json)
       
       return json
       
@@ -25,7 +25,7 @@ class Parser{
     }
   }
   
-  func formatData(jsonData: [String:AnyObject]) -> [String:AnyObject] {
+  static func formatData(jsonData: [String:AnyObject]) -> [String:AnyObject] {
   
     /*
      * The formatDataDictionary, at the moment, contains:
@@ -69,5 +69,16 @@ class Parser{
     formatDataDictionary["Entities"] = tempArray as AnyObject?
       return formatDataDictionary
     
+  }
+  
+  static func dictionaryToSentence(dictionary: [String: AnyObject]) -> SentenceModel {
+    let results = dictionary["Entities"] as! [AnyObject]
+    var finishedResults = [ResultModel]()
+    for entity in results {
+      let result = ResultModel(modelURL: entity["wikipedia"] as! String, modelTitle: entity["name"] as! String, modelSignificance: 0.0, type: .link)
+      finishedResults.append(result)
+    }
+    
+    return SentenceModel(sentenceText: dictionary["sentence"] as! String, resultModels: finishedResults)
   }
 }
