@@ -6,7 +6,7 @@ target 'iOSHack' do
   use_frameworks!
 
   # Pods for iOSHack
-  pod 'Firebase', '~> 3.12'
+  pod 'Firebase/Database'
 
   target 'iOSHackTests' do
     inherit! :search_paths
