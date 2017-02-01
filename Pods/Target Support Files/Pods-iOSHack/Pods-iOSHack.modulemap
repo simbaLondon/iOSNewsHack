@@ -1,0 +1,6 @@
+framework module Pods_iOSHack {
+  umbrella header "Pods-iOSHack-umbrella.h"
+
+  export *
+  module * { export * }
+}
